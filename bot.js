@@ -346,4 +346,4 @@ client.on('ready', () => {
   });
 
 
-  client.login("Your token here"); 
+ bot.login(process.env.TOKEN);
