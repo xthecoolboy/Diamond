@@ -2,7 +2,7 @@ const database = require('../database.js')
 
 
 exports.run = ({ client, message, args, lang, language }, t) => {
-database.Guilds.findbyId(message.guild.id, (err, server) => {
+database.Guilds.findbyId(message.guilds.id, (err, server) => {
     if (server) {
         if (args[0] === 'en') {
             server.lang = 'en-US'
