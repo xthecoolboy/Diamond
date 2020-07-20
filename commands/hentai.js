@@ -4,7 +4,7 @@ const superagent = require('superagent')
 exports.run = (client, msg, args) => {
   if (msg.channel.nsfw === true) {
     superagent.get('https://nekobot.xyz/api/image')
-    .query({ type: 'belledephille'})
+    .query({ type: 'hentai_food'})
     .end((err, response) => {
       msg.channel.send({ file: response.body.message });
     });
