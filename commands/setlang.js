@@ -14,7 +14,7 @@ database.Guilds.findbyId(message.guild.id, (err, server) => {
             message.channel.send('EN')
         }
     } else {
-        var save = new database.Guilds({ _id: message.guild.id, lang: 'pt-BR' })
+        var save = new database.Guilds({ _id: message.guilds.id, lang: 'pt-BR' })
         save.save()
         message.channel.send('Salvo! Use de novo!')
     }
